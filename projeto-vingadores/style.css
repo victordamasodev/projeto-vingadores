@@ -1,0 +1,350 @@
+@charset "UTF-8";
+
+* {
+    margin: 0px;
+    padding: 0px;
+    font-family: sans-serif;
+    box-sizing: border-box;
+}
+
+:root{
+    --cor1: #111111;
+    --cor2: #f13239;
+}
+
+header{
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    background-color: var(--cor1);
+    width: 100vw;
+    height: 70px;
+    
+    img.logo{
+        height: 70px;
+        padding-top: 15px;
+        padding-bottom: 3px;
+    }
+
+    nav{
+        display: flex;
+        
+        
+        ul{
+            display: flex;
+            list-style: none;
+            gap: 20px;
+        }
+
+        a{
+            text-decoration: none;
+            color: white;
+            padding-top: 5px;
+            transition: color 0.2s;
+        }
+
+        a:hover{
+            border-top: 1px solid var(--cor2);
+            color: var(--cor2);
+        }
+    }
+}
+
+.banner{
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+    width: 100vw;
+    height: 320px;
+    background-image: url(images/banner.jpg);
+    background-size: cover;
+    background-position: center 25%;
+    border-bottom: 4px solid #f13239;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.479);
+}
+
+.dots{
+   padding-bottom: 10px;
+
+   button{
+    display: inline-block;
+    background-color: white;
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    margin: 4px;
+    cursor: pointer;
+    outline: none;
+    border: none;
+   }
+
+   button#opcao1{
+    background-color: #f13239;
+   }
+}
+
+.galeria{
+    padding: 50px;
+    
+    h2{
+        border-left: 4px solid #f13239;
+        padding-left: 10px;
+    }
+    
+}
+
+.galeria-linha{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    
+    
+    h2{
+        border-left: 4px solid #f13239;
+        padding-left: 10px;
+    
+    }
+
+    .img{
+        flex: 1 1 200px;
+        width: 400px;
+        padding: 20px;
+        display: flex;
+        flex-direction: column;
+        
+        img{
+            box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.589);
+            border-radius: 8px;
+            transition: filter 0.3s;
+        }
+
+        p{
+            padding-top: 15px;
+        }
+    }
+}
+
+.img:hover {
+    transform: scale(1.1);
+    z-index: 10; 
+}
+
+.galeria-linha:hover .img:not(:hover) img {
+    filter: blur(2px);
+}
+
+.galeria p{
+    font-weight: bold;
+}
+
+
+.personagens{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #111111;
+    border-top: 4px solid #f13239;
+    box-shadow: -2px -2px 5px rgba(0, 0, 0, 0.726);
+}
+
+.historia-container{
+    border-bottom: 2px solid #f13239;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 50px 20px 0px 20px;
+    color: white;
+    
+    div + div{
+        margin-left: 40px;
+    }
+
+    h2{
+        border-left: 4px solid #f13239;
+        padding-left: 10px;
+        margin-bottom: 30px;
+    }
+    p{
+        text-align: justify;
+        line-height: 1.5;
+        font-weight: normal;
+        padding-bottom: 20px;
+    }
+    a{
+        color: #f13239;
+        text-decoration: none;
+        font-weight: bold;
+    }
+}
+
+
+.historia{
+    display: flex;
+    flex-direction: column;
+    width: 500px;
+
+}
+
+.historia-img img{
+    width: 500px ;
+    height: 400px;
+    display: block;
+}
+
+
+footer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 30px;
+    font-size: 15px;
+    background-color: #111111;
+    
+    color: white;
+
+    span{
+        color: #f13239;
+    }
+ 
+}
+
+
+@media (width < 600px) {
+
+    header{
+        display: flex;
+        flex-direction: column;
+        height: 100px;
+
+        img.logo{
+            padding-top: 15px;
+        }
+        nav{
+            display: flex;
+            
+            ul{
+                display: flex;
+                list-style: none;
+                gap: 20px;
+                padding-bottom: 10px;
+            }
+    
+            a{
+                text-decoration: none;
+                color: white;
+                padding-top: 5px;
+                transition: color 0.2s;
+            }
+    
+            a:hover{
+                border-top: 1px solid var(--cor2);
+                color: var(--cor2);
+            }
+        }
+    }
+
+    .galeria{
+        padding: 50px;
+        
+        h2{
+            border-left: 4px solid #f13239;
+            padding-left: 10px;
+        }
+        
+    }
+    .img:hover {
+        transform: scale(1.02);
+        z-index: 10; 
+    }
+    
+    .galeria-linha:hover .img:not(:hover) img {
+        filter: blur(2px);
+    }
+    
+    .historia-container{
+        flex-direction: column;
+    }
+
+    .historia{
+        display: flex;
+        flex-direction: column;
+        width: 300px;
+    
+    }
+    
+    .historia-img img{
+        width: 300px ;
+        height: 300px;
+        display: block;
+        padding-top: 40px;
+    }
+}
+
+
+@media (600px < width < 1100px) {
+
+    header{
+    
+        img.logo{
+            padding-top: 15px;
+        }
+        nav{
+            display: flex;
+            
+            ul{
+                display: flex;
+                list-style: none;
+                gap: 20px;
+            }
+    
+            a{
+                text-decoration: none;
+                color: white;
+                padding-top: 5px;
+                transition: color 0.2s;
+            }
+    
+            a:hover{
+                border-top: 1px solid var(--cor2);
+                color: var(--cor2);
+            }
+        }
+    }
+
+    .galeria{
+        padding: 50px;
+        
+        h2{
+            border-left: 4px solid #f13239;
+            padding-left: 10px;
+        }
+        
+    }
+    .img:hover {
+        transform: scale(1.02);
+        z-index: 10; 
+    }
+    
+    .galeria-linha:hover .img:not(:hover) img {
+        filter: blur(2px);
+    }
+    
+    .historia-container{
+        flex-direction: column;
+    }
+
+    .historia{
+        display: flex;
+        flex-direction: column;
+        width: 600px;
+    
+    }
+    
+    .historia-img img{
+        width: 400px ;
+        height: 400px;
+        display: block;
+        padding-top: 40px;
+    }
+}
