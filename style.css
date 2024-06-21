@@ -12,6 +12,10 @@
     --cor2: #f13239;
 }
 
+body{
+    overflow-x: hidden;
+}
+
 header{
     display: flex;
     align-items: center;
