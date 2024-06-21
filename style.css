@@ -89,7 +89,11 @@ header{
 
 .galeria{
     padding: 50px;
-    
+    background-image: url(images/bg-body.jpg);
+    background-position: top right;
+    background-size: cover;
+    background-attachment: fixed;
+
     h2{
         border-left: 4px solid #f13239;
         padding-left: 10px;
