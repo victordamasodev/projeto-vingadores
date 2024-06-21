@@ -17,14 +17,15 @@ function active(opcao){
         option1.style.backgroundColor = 'white';
         option3.style.backgroundColor = 'white';
 
-        banner.style.backgroundImage =  'none'
-        banner.style.backgroundColor =  'green'
+        banner.style.backgroundImage =  'url(images/banner2.jpg)'
+        
     } else if (opcao ==3){
         option1.style.backgroundColor = 'white';
         option2.style.backgroundColor = 'white';
         option3.style.backgroundColor = '#f13239';
         
-        banner.style.backgroundImage =  'none'
-        banner.style.backgroundColor =  'orange'
+        banner.style.backgroundImage =  'url(images/banner3.png)'
+        banner.style.backgroundPosition = 'center center'
+       
     }
 }
